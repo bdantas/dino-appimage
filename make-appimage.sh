@@ -6,11 +6,10 @@ ARCH=$(uname -m)
 VERSION=$(pacman -Q dino | awk '{print $2; exit}') # example command to get version of application here
 export ARCH VERSION
 export OUTPATH=./dist
-#export ADD_HOOKS="self-updater.hook"
-#export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
-export ICON=DUMMY
-export DESKTOP=DUMMY
-export MAIN_BIN=dino
+export ADD_HOOKS="self-updater.hook"
+export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
+export ICON=/usr/share/icons/hicolor/scalable/apps/im.dino.Dino.svg
+export DESKTOP=/usr/share/applications/im.dino.Dino.desktop
 export DEPLOY_GLIB_NETWORKING=1
 
 # Deploy dependencies
