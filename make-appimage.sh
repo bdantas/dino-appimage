@@ -2,6 +2,7 @@
 
 set -eu
 
+PACKAGENAME=dino
 ARCH=$(uname -m)
 VERSION=$(pacman -Q PACKAGENAME | awk '{print $2; exit}') # example command to get version of application here
 export ARCH VERSION
