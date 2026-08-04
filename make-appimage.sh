@@ -10,10 +10,13 @@ export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=/usr/share/icons/hicolor/scalable/apps/im.dino.Dino.svg
 export DESKTOP=/usr/share/applications/im.dino.Dino.desktop
-export DEPLOY_GLIB_NETWORKING=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/dino
+quick-sharun \
+	/usr/bin/dino         \
+	/usr/lib/dino         \
+	/usr/lib/libqlite.so* \
+	/usr/lib/libxmpp-vala.so*
 
 # Additional changes can be done in between here
 
